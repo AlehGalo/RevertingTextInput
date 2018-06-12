@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 120px;
+        font-size: 12px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 6px 10px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown-content a.disabled {
+        pointer-events: none;
+        background-color: #f6f6f6;
+        color: gray;
+    }
+
+    .show {
+        display: block;
+    }
+</style>
+<body>
+<div class="dropdown">
+    <canvas id="myCanvas" width="200" height="30" style="border:1px solid #000000;">
+        Your browser does not support the canvas element.
+    </canvas>
+    <input>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="#" name="copy" onclick="copyClicked()">Copy</a>
+        <a href="#" name="cut" onclick="cutClicked()">Cut</a>
+        <a href="#" name="paste" onclick="pasteClicked()">Paste</a>
+        <hr>
+        <a href="#" name="selectAll" onclick="selectAllClicked()">Select All</a>
+    </div>
+</div>
+
+<script type="application/javascript" src="Canvas.js"></script>
+</body>
+</html>
